@@ -1672,8 +1672,9 @@ func (v *Viper) unmarshalReader(in io.Reader, c map[string]interface{}) error {
 			}
 		}
 	}
-
-	insensitiviseMap(c)
+	if v.insensitivise {
+		insensitiviseMap(c)
+	}
 	return nil
 }
 
