@@ -265,10 +265,8 @@ func (fn optionFunc) apply(v *Viper) {
 }
 
 //add by kalrey
-func Insensitivise(insensitivise bool) Option {
-	return optionFunc(func(v *Viper) {
-		v.insensitivise = insensitivise
-	})
+func Insensitivise(insensitivise bool) {
+	v.insensitivise = insensitivise
 }
 
 // KeyDelimiter sets the delimiter used for determining key parts.
