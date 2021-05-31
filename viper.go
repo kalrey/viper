@@ -266,6 +266,11 @@ func (fn optionFunc) apply(v *Viper) {
 
 //add by kalrey
 func Insensitivise(insensitivise bool) {
+	v.Insensitivise(insensitivise)
+}
+
+//add by kalrey
+func (v *Viper) Insensitivise(insensitivise bool) {
 	v.insensitivise = insensitivise
 }
 
